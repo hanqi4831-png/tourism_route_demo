@@ -163,6 +163,7 @@ data/trajectory.csv
 ```
 
 If these files do not exist, the Web app can still start, but recommendation features will require data import from the browser UI.
+Note that the database currently being used is only a simulated database with a very small amount of data. It is only used to test the system. Without setting personalized conditions, it can only discover about 10 routes at most. In addition, it may not be able to discover any routes under some personalized conditions. It is recommended to set the time budget to more than 5 hours.
 
 Required fields for `poi.csv`:
 
