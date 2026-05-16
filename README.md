@@ -1,6 +1,6 @@
 # Tourism Route Recommendation System
 
-This project is a travel route generation system based on ring symmetry pattern mining, which returns the top K recommended routes according to category preference, season, starting point, required points of interest, time budget, hard screening conditions and soft ranking priority.
+This project is a travel route generation system based on circular co-location pattern mining, which returns the top K recommended routes according to category preference, season, starting point, required points of interest, time budget, hard screening conditions and soft ranking priority.
 ## Overview
 
 The current runtime entrypoints are:
