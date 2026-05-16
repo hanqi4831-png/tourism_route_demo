@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tourism Route Recommendation Demo</title>
+    <link rel="stylesheet" href="/static/styles.css?v=compact-dashboard-8" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Tourism Route Recommendation Demo</h1>
+      <p>Simple-cycle mining with hard filters and soft ranking.</p>
+    </header>
+
+    <main class="page">
+      <section class="top-grid">
+        <section class="panel input-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Recommendation Input</h2>
+              <p class="panel-subtitle">Compact desktop layout for one-screen capture.</p>
+            </div>
+          </div>
+          <div class="panel-body">
+            <form id="recommend-form" class="compact-form">
+              <div class="form-grid">
+                <div class="form-field span-2">
+                  <label>Preferred Categories</label>
+                  <div id="preferred-categories" class="multi-checklist"></div>
+                </div>
+
+                <div class="form-field">
+                  <label>Season</label>
+                  <select id="season">
+                    <option value="">No limit</option>
+                  </select>
+                </div>
+
+                <div class="form-field">
+                  <label>Start POI</label>
+                  <select id="start-poi">
+                    <option value="">No limit</option>
+                  </select>
+                </div>
+
+                <div class="form-field span-2">
+                  <label>Required POIs</label>
+                  <div id="must-visit-pois" class="multi-checklist poi-checklist"></div>
+                </div>
+
+                <div class="form-field">
+                  <label>Time Budget (hours)</label>
+                  <input id="time-budget" type="number" min="0" step="0.5" placeholder="Example: 4" />
+                </div>
+
+                <div class="form-field">
+                  <label>Top-K</label>
+                  <input id="top-k" type="number" min="1" step="1" placeholder="Use the system default" />
+                </div>
+
+                <div class="form-field span-2">
+                  <label>Hard Filters</label>
+                  <div id="hard-filter-options" class="multi-checklist compact-checklist"></div>
+                </div>
+
+                <div class="form-field span-2">
+                  <label>Soft Rank Priority</label>
+                  <div id="soft-rank-options" class="rank-board"></div>
+                  <div class="form-hint">
+                    Same rank means tied priority. Leave blank to exclude a condition from soft ranking.
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit">Generate Recommendations</button>
+                <p id="status" class="status"></p>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel compact-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Data Import</h2>
+                <p class="panel-subtitle">Replace the runtime dataset.</p>
+              </div>
+            </div>
+            <div class="panel-body">
+              <form id="import-form" class="mini-form">
+                <label>POI Data File (`poi.csv`)</label>
+                <div class="file-picker">
+                  <input id="poi-file" class="file-picker-input" type="file" accept=".csv,text/csv" />
+                  <label class="file-picker-button" for="poi-file">Choose File</label>
+                  <span id="poi-file-name" class="file-picker-name">No file chosen</span>
+                </div>
+
+                <label>Trajectory Data File (`trajectory.csv`)</label>
+                <div class="file-picker">
+                  <input
+                    id="trajectory-file"
+                    class="file-picker-input"
+                    type="file"
+                    accept=".csv,text/csv"
+                  />
+                  <label class="file-picker-button" for="trajectory-file">Choose File</label>
+                  <span id="trajectory-file-name" class="file-picker-name">No file chosen</span>
+                </div>
+
+                <button type="submit">Upload and Reload Data</button>
+              </form>
+              <p id="import-status" class="status"></p>
+            </div>
+          </section>
+
+          <section class="panel compact-panel system-log-panel">
+            <div class="panel-head">
+              <div>
+                <h2>System Log</h2>
+                <p class="panel-subtitle">System snapshot and recommendation logs.</p>
+              </div>
+            </div>
+            <div class="panel-body">
+              <div id="system-log" class="system-log">
+                Load data to see system and recommendation logs.
+              </div>
+            </div>
+          </section>
+
+          <section class="panel section-panel results-panel sidebar-results-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Recommendation Results</h2>
+                <p class="panel-subtitle">Compact cards. Click a route for full metrics.</p>
+              </div>
+            </div>
+            <div class="panel-body results-panel-body">
+              <div id="results" class="cards"></div>
+            </div>
+          </section>
+        </aside>
+      </section>
+
+      <section class="bottom-grid">
+        <section class="panel section-panel details-panel details-only-panel">
+          <div class="panel-head">
+            <div>
+              <h2>Route Details</h2>
+              <p class="panel-subtitle">The selected route is expanded here.</p>
+            </div>
+          </div>
+          <div class="panel-body">
+            <div id="details">Click a route card above to inspect the full route details.</div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/static/app.js?v=compact-dashboard-6"></script>
+  </body>
+</html>

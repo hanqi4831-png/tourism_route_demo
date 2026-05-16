@@ -1,0 +1,17 @@
+﻿poi_id,poi_name,category,latitude,longitude,visit_duration_minutes,opening_hours,suitable_season
+P001,Ancient City Gate,Historic,31.2305,121.4735,45,09:00-18:00,all
+P002,Lotus Garden,Park,31.2318,121.4751,60,08:00-18:30,all
+P003,City Museum,Museum,31.2332,121.4768,80,09:00-17:30,all
+P004,Tea Lane,Food,31.2346,121.4785,55,10:00-20:30,all
+P005,Riverside Walk,Nature,31.236,121.4802,50,07:00-19:00,summer
+P006,Crafts Market,Shopping,31.2373,121.4819,70,10:00-21:00,all
+P007,Skyline Deck,Nature,31.2388,121.4836,75,08:00-20:00,summer
+P008,Harbor Street,Culture,31.2402,121.4853,65,09:00-21:30,summer
+P009,Temple Courtyard,Culture,31.2417,121.487,70,08:30-17:30,all
+P010,Art Gallery,Museum,31.243,121.4887,65,09:00-18:00,all
+P011,Night Food Plaza,Food,31.2445,121.4904,85,16:00-23:00,all
+P012,Lantern Bazaar,Shopping,31.2459,121.4921,75,10:00-22:00,all
+P013,Snow Pavilion,Historic,31.2474,121.4938,60,09:00-18:00,all
+P014,Indoor Aquarium,Entertainment,31.2488,121.4955,95,09:30-20:00,winter
+P015,Science Center,Museum,31.2502,121.4972,90,09:00-18:00,winter
+P016,Old Wharf Cafe,Food,31.2517,121.4989,70,10:00-21:00,winter

@@ -1,0 +1,25 @@
+# Python virtual environment
+.venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Common local tool caches
+.pytest_cache/
+.mypy_cache/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Build and output artifacts
+outputs/
+
+# Local raw and cleaned data artifacts that are not needed for GitHub upload
+data2/
+data_cleaned/
+
+# Optional:
+# Uncomment the next line if you do not want to upload the runtime dataset.
+# data/
