@@ -1,7 +1,6 @@
 # Tourism Route Recommendation System
 
-This project is a Windows-focused Web application for tourism route recommendation. It mines `simple cycle` route patterns from historical trajectory data and returns Top-K recommendations based on category preferences, season, start point, required POIs, time budget, hard filters, and soft ranking priorities.
-
+This project is a travel route generation system based on ring symmetry pattern mining, which returns the top K recommended routes according to category preference, season, starting point, required points of interest, time budget, hard screening conditions and soft ranking priority.
 ## Overview
 
 The current runtime entrypoints are:
